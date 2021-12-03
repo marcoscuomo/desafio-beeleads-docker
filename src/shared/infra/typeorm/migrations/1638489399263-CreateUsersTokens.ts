@@ -11,7 +11,9 @@ export class CreateUsersTokens1638489399263 implements MigrationInterface {
 						{
 							name: "TOKEN_ID",
 							type: "int",
-							isPrimary: true
+							isPrimary: true,
+							isGenerated: true,
+							generationStrategy: "increment"
 						},
 						{
 							name: "TOKEN_REFRESH_TOKEN",

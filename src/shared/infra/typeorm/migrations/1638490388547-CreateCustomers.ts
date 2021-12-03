@@ -11,7 +11,9 @@ export class CreateCustomers1638490388547 implements MigrationInterface {
 						{
 							name: "CUSTOMER_ID",
 							type: "int",
-							isPrimary: true
+							isPrimary: true,
+							isGenerated: true,
+							generationStrategy: "increment"
 						},
 						{
 							name: "CUSTOMER_NAME",
