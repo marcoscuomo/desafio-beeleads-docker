@@ -1,6 +1,6 @@
 {
   "type": "mysql",
-  "port": "3366",
+  "port": "3306",
   "host": "localhost",
   "username": "root",
   "password": "beeleads",
@@ -9,7 +9,7 @@
   "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
   },
-  "entities": [
+  "entities": [ 
       "./src/modules/**/entities/*.ts"
   ]
 }

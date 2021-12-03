@@ -9,11 +9,6 @@ class UsersTokens {
   id: string;
 
   @Column({
-    name: 'USER_NAME'
-  })
-  name: string;
-
-  @Column({
     name: 'TOKEN_REFRESH_TOKEN'
   })
   refreshToken: string;
