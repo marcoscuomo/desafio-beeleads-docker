@@ -1,12 +1,11 @@
 const messages = {
   erros: {
-    emailOrPasswordIncorrect: 'Email or password is incorrect',
-    invalidToken: 'Invalid token',
-    refreshTokenDoesNotExists: 'Refresh token does not exists',
-    tokenIsMissing: 'Token is missing',
-    todoNotFound: 'Todo not found',
-    userAlreadyExists: 'User Already exists',
-    userDoesNotExists: 'User does not exists'
+    emailOrPasswordIncorrect: 'Email ou password está incorreto',
+    invalidToken: 'Token inválido',
+    refreshTokenDoesNotExists: 'Refresh token não existe',
+    tokenIsMissing: 'Token não encontrado',
+    userAlreadyExists: 'Usuário já existe',
+    userDoesNotExists: 'Usuário não existe'
   },
   validation: {
     CampoEmailNaoValido: 'Campo e-mail não é válido',
