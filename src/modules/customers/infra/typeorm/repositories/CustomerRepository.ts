@@ -52,7 +52,7 @@ class CustomerRepository implements ICustomerRepository {
       sexo,
       telefone
     })
-    .where("id := id")
+    .where("id = :id")
     .setParameters({id})
     .execute();
   }

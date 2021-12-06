@@ -1,18 +1,20 @@
 const messages = {
   erros: {
+    customerExists: 'Cliente já cadastrado',
+    customerDoesNotExists: 'Cliente não encontrado',
     emailOrPasswordIncorrect: 'Email ou password está incorreto',
     invalidToken: 'Token inválido',
     refreshTokenDoesNotExists: 'Refresh token não existe',
     tokenIsMissing: 'Token não encontrado',
     userAlreadyExists: 'Usuário já existe',
-    userDoesNotExists: 'Usuário não existe',
-    customerExists: 'Cliente já cadastrado'
+    userDoesNotExists: 'Usuário não existe'
   },
   validation: {
     campoDataNascimento: 'Campo dataNascimento é obrigatório',
     campoDataNascimentoInvalido: 'Campo dataNascimento não é válido',
     CampoEmailNaoValido: 'Campo e-mail não é válido',
     CampoEmailObrigatorio: 'Campo e-mail é obrigatório',
+    campoIdInvalido: 'Campo id não é válido',
     CampoNomeMinimo: 'Campo nome deve ter no minimo 2 digitos',
     CampoNomeObrigatorio: 'Campo nome é obrigatório',
     CampoSenhaMinimo6Digitos: 'A senha deve ter no minimo 6 digitos',
