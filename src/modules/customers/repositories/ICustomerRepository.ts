@@ -8,7 +8,7 @@ interface ICustomerRepository {
   findByName(nome: string): Promise<Customer[]>;
   findByEmail(email: string): Promise<Customer>;
   updateCustomer(data: IUpdateCustomerDTO): Promise<void>;
-  deleteCustomer(id: number): Promise<void>;
+  deleteCustomer(id: string): Promise<void>;
 }
 
 export { ICustomerRepository }

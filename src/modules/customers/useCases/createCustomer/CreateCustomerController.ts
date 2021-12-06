@@ -40,7 +40,7 @@ class CreateCustomerController {
       const createCutomerUseCase = container.resolve(CreateCustomerUseCase);
       const customer = await createCutomerUseCase.execute({ nome, email, sexo, telefone, dataNascimento });
 
-      return response.json(customer);
+      return response.status(201).json(customer);
       
     } catch(err) {  
       if(err instanceof yup.ValidationError){

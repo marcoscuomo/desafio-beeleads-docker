@@ -57,7 +57,7 @@ class CustomerRepository implements ICustomerRepository {
     .execute();
   }
   
-  async deleteCustomer(id: number): Promise<void> {
+  async deleteCustomer(id: string): Promise<void> {
     await this.repository
     .createQueryBuilder()
     .update(Customer)
