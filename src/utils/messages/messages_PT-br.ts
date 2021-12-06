@@ -4,6 +4,7 @@ const messages = {
     customerDoesNotExists: 'Cliente não encontrado',
     emailOrPasswordIncorrect: 'Email ou password está incorreto',
     invalidToken: 'Token inválido',
+    noCustomersFound: 'Nenhum cliente encontrado',
     refreshTokenDoesNotExists: 'Refresh token não existe',
     tokenIsMissing: 'Token não encontrado',
     userAlreadyExists: 'Usuário já existe',

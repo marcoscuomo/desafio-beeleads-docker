@@ -6,3 +6,5 @@ interface IUpdateCustomerDTO {
   dataNascimento: Date;
   sexo: string;
 }
+
+export { IUpdateCustomerDTO }

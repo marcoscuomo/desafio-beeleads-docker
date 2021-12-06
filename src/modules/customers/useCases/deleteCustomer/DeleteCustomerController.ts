@@ -11,7 +11,7 @@ class DeleteCustomerController {
 
     await deleteCustomerUseCase.execute(id);
 
-    return response.send();
+    return response.status(204).send();
   }  
 }
 

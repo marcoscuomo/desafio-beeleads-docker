@@ -2,6 +2,9 @@ import { getRepository, Repository } from "typeorm";
 
 import { ICustomerRepository } from "@modules/customers/repositories/ICustomerRepository";
 import { Customer } from "../entities/Customer";
+import { ISearchCustomerDTO } from "@modules/customers/dtos/ISearchCustomerDTO";
+import { ICreateCustomerDTO } from "@modules/customers/dtos/ICreateDTO";
+import { IUpdateCustomerDTO } from "@modules/customers/dtos/IUpdateCustomerDTO";
 
 class CustomerRepository implements ICustomerRepository {
 
@@ -70,6 +73,48 @@ class CustomerRepository implements ICustomerRepository {
     .where("id = :id")
     .setParameters({id})
     .execute();
+  }
+
+  async findCustomer({ id, nome, email, dataNascimento, sexo, telefone }: ISearchCustomerDTO): Promise<Customer[]> {
+    const queryCustomer = this.repository
+    .createQueryBuilder("c")
+    .where("c.deleted = :deleted")
+    .setParameters({deleted: false})
+    .andWhere("c.active = :active")
+    .setParameters({active: true});
+
+    if(id) {
+      queryCustomer.andWhere("c.id = :id")
+      .setParameters({ id })
+    }
+
+    if(nome) {
+      queryCustomer.andWhere("c.nome like :nome")
+      .setParameters({ nome: `%${nome}%` })
+    }
+
+    if(email) {
+      queryCustomer.andWhere("c.mail = :email")
+      .setParameters({ email })
+    }
+
+    if(dataNascimento) {
+      queryCustomer.andWhere("c.dataNascimento = :dataNascimento")
+      .setParameters({ dataNascimento })
+    }
+
+    if(sexo) {
+      queryCustomer.andWhere("c.sexo = :sexo")
+      .setParameters({ sexo })
+    }
+
+    if(telefone) {
+      queryCustomer.andWhere("c.telefone like :telefone")
+      .setParameters({ telefone: `%${telefone}%` })
+    }
+
+    return await queryCustomer.getMany();
+
   }
 
 }

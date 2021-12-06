@@ -5,3 +5,5 @@ interface ICreateCustomerDTO {
   dataNascimento: Date;
   sexo: string;
 }
+
+export { ICreateCustomerDTO }

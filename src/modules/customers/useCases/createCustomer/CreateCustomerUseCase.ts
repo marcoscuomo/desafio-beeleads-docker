@@ -1,6 +1,5 @@
 import { inject, injectable } from "tsyringe";
 
-import { CustomerRepository } from "@modules/customers/infra/typeorm/repositories/CustomerRepository";
 import { ICustomerRepository } from "@modules/customers/repositories/ICustomerRepository";
 import { AppError } from "@shared/errors/AppErrors";
 import { messages } from "@utils/messages/messages_PT-br";
