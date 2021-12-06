@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryColumn } from "typeorm";
 
 @Entity('CUSTOMER')
-class User {
+class Customer {
   @PrimaryColumn({
     name: 'CUSTOMER_ID'
   })
@@ -48,4 +48,4 @@ class User {
   deleted: boolean;
 }
 
-export { User }
+export { Customer }
