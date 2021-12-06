@@ -30,7 +30,9 @@ class CustomerRepository implements ICustomerRepository {
   }
   
   async listCustomers(): Promise<Customer[]> {
-    return await this.repository.find();
+    return await this.repository.find({
+      where: {active: true, deleted: false}
+    });
   }
   
   async findByName(nome: string): Promise<Customer[]> {
