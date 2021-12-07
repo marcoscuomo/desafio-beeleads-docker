@@ -150,7 +150,7 @@ Primeiro será necessário criar um usuário, pois as rotas de gerenciamento do 
 }
 ```
 
-## `7. Atualizando um cliente `
+## `8. Atualizando um cliente `
 
 - Rota: http://localhost:3333/customer
 - Método: put
@@ -169,7 +169,7 @@ Primeiro será necessário criar um usuário, pois as rotas de gerenciamento do 
 }
 ```
 
-## `8. Listando os clientes `
+## `9. Listando os clientes `
 
 - Rota: http://localhost:3333/customer
 - Método: get
@@ -180,7 +180,7 @@ Primeiro será necessário criar um usuário, pois as rotas de gerenciamento do 
 no body
 ```
 
-## `9. Excluindo um cliente `
+## `10. Excluindo um cliente `
 
 Deverá ser passado o id do cliente no query params da rota 
 
@@ -193,7 +193,7 @@ Deverá ser passado o id do cliente no query params da rota
 no body
 ```
 
-## `10. Pesquisando um cliente `
+## `11. Pesquisando um cliente `
 
 Nessa rota poderá ser pesquisado por todos os campos dos cadastros 
 
