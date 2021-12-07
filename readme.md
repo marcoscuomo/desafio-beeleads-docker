@@ -9,14 +9,14 @@
 #### 1.1 Instalação
 
 O Docker precisará estar instalado para executar os containers do Node e do MySql.\
-Caso ainda não tenha o Docker em sua máquina, segue abaixo as instruções de como fazer a intalação de acordo com seu sistema operacional.\
+Caso ainda não tenha o Docker em sua máquina, siga as instruções abaixo para fazer a intalação de acordo com seu sistema operacional.
 
 [Windows](https://docs.docker.com/desktop/windows/install)\
 [Linux ( Ubuntu )](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-pt)\
 [Mac](https://docs.docker.com/desktop/mac/install)
 
 #### 1.2 Docker-compose
-Com o docker instalado e em execução vamos realizar a criação dos containers, para isso devemos rodar o comando:\
+Com o docker instalado e em execução vamos realizar a criação dos containers, para isso devemos rodar o comando:
 
 ```
 docker-compose up -d
@@ -29,6 +29,7 @@ docker ps
 ```
 
 A saída deverá ser parecida com a imagem abaixo:\
+
 <img src="https://i.ibb.co/MgCR3fH/Captura-de-Tela-2021-12-06-a-s-23-47-25.png" alt="docker ps" />
 
 Caso os containers não estejam em execução rodar o comando:
@@ -39,7 +40,7 @@ docker-compose start
 
 ## `2. Instalando as depêndencias`
 
-Para baixar as depêndecias da aplicação rodar o comando:\
+Para baixar as depêndecias da aplicação rodar o comando:
 
 ```
 yarn ou npm install
@@ -49,14 +50,14 @@ yarn ou npm install
 ## `3. Banco de dados`
 #### 3.1 Migrations
 
-Com o docker rodando e os containers em execução agora será necessário executar as migrations para a criação das tabelas, para isso execute o comando:\
+Com o docker rodando e os containers em execução agora será necessário executar as migrations para a criação das tabelas, para isso execute o comando:
 
 ```
 yarn typeorm migration:run
 ```
 
 A partir desse ponto já será possível acessar as rotas da api.\
-Primeiro será necessário criar um usuário, pois as rotas de gerenciamento do cliente precisam ser requisições autenticadas.\ 
+Primeiro será necessário criar um usuário, pois as rotas de gerenciamento do cliente precisam ser requisições autenticadas.
 
 
 ## `4. Criando um usuário `
